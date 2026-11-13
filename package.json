@@ -1,0 +1,19 @@
+{
+  "name": "update-interview-bank",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Claude Code skill + 离线工具箱：从 ChatGPT / 豆包 / Gemini 会话提取、分类、脱敏面试问答，编译成离线刷题页",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "login": "node tools/extract/login.mjs",
+    "extract:doubao": "node tools/extract/doubao.mjs",
+    "extract:gemini": "node tools/extract/gemini.mjs",
+    "extract:chatgpt": "node tools/extract/chatgpt.mjs",
+    "retry:chatgpt": "node tools/extract/retry-chatgpt.mjs",
+    "build": "node tools/build.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.65.0"
+  }
+}
